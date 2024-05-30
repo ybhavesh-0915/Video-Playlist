@@ -1,5 +1,5 @@
 let videoData=[
-    "https://www.youtube.com/embed/Q4p8vRQX8uY?si=bh4sN3yvSVJmkfvc",
+    "/1 introduction to JS",
     "/2 Variables in JavaScript.mp4",
     "/3 const, let and var in JavaScript.mp4",
     "/4 Primitives and Objects in JavaScript.mp4",
