@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+    color: #ffffff;
+}
+
+.video-container {
+    width: 754px;
+    height: 500px;
+    padding: 8px;
+    background-color: #242428;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #484848;
+}
+
+.video-container #videos {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.video-container .video-title {
+    text-align: center;
+}
+
+.playlist {
+    height: 500px;
+    width: 100%;
+    background-color: #242428;
+    border-radius: 5px;
+    border: 1px solid #484848;
+    overflow: hidden;
+    position: relative;
+}
+
+.playlist-detail {
+    padding: 8px;
+    background-color: #303030;
+    border-bottom: 1px solid #484848;
+    display: flex;
+    justify-content: space-between;
+}
+
+.playlist-detail .counter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.playlist-detail .counter .ri {
+    font-size: larger;
+}
+
+.playlist-btn {
+    margin: 8px 0 8px 0;
+    padding: 0 3px 8px 8px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: auto;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.playlist-btn::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+.playlist-btn::-webkit-scrollbar-thumb {
+    background-color: #484848;
+    border: 3px solid #242428;
+    border-radius: 10px;
+}
+
+.playlist-btn::-webkit-scrollbar-thumb:hover {
+    background-color: #585858;
+}
+
+.playlist-btn .video-btn {
+    width: 100%;
+    padding: 5px;
+    background-color: #484848;
+    color: white;
+    border-radius: 3px;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.playlist-btn .video-btn:hover {
+    background-color: #585858;
+}
+
+.playlist-btn #active {
+    background-color: dodgerblue !important;
+    position: sticky;
+}
+
+#active .soundwave {
+    visibility: visible !important;
+}
+
+.soundwave {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    visibility: hidden;
+}
+
+.soundwave .bar {
+    width: 3px;
+    border-radius: 10px;
+}
+
+.bar1 {
+    animation: waves .9s ease-in-out infinite;
+    background-color: #ff6347;
+}
+
+.bar2 {
+    animation: waves .7s ease-in-out infinite;
+    background-color: #d49137;
+}
+
+.bar3 {
+    animation: waves 1s ease-in-out infinite;
+    background-color: #5c62d6;
+}
+
+.bar4 {
+    animation: waves .8s ease-in-out infinite;
+    background-color: #cae7d3;
+}
+
+.bar5 {
+    animation: waves .6s ease-in-out infinite;
+    background-color: #4fb06d;
+}
+
+@keyframes waves {
+    0% {
+        height: 0px;
+
+    }
+
+    50% {
+        height: 20px;
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+.video-detail {
+    width: 100%;
+    height: 42px;
+    padding: 8px;
+    background-color: #303030;
+    border-top: 1px solid #484848;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.video-detail .ri {
+    font-size: larger;
+}
+
+.video-detail a {
+    color: #ffffff;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (max-width:1060px) {
+    body {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: none;
+        gap: 15px;
+    }
+
+}
+
+@media only screen and (max-width:794px) {
+    body {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: none;
+        gap: 10px;
+    }
+
+    .video-container {
+        width: auto;
+        height: auto;
+        gap: 5px;
+    }
+
+    .video-title {
+        font-size: 15px;
+    }
+}
