@@ -58,7 +58,9 @@ body {
     background-color: #303030;
     border-bottom: 1px solid #484848;
     display: flex;
+    gap: 150px;
     justify-content: space-between;
+    align-items: flex-end;
 }
 
 .playlist-detail .counter {
