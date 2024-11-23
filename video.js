@@ -22,7 +22,7 @@ let videoTitle=[
 ]
 
 let playlistbtn = document.getElementsByClassName("playlist-btn")[0]
-for (let i = 0; i < 103; i++) {
+for (let i = 0; i < videoTitle.length; i++) {
     playlistbtn.innerHTML += `
     <button type="button" class="video-btn" onclick="changeVideo(this, videoData[${i}], videoTitle[${i}]);">
         ${videoTitle[i]}
@@ -36,6 +36,10 @@ for (let i = 0; i < 103; i++) {
     </button>
     `;
 }
+
+// count of video
+document.getElementsByClassName("counter")[0].innerHTML = `<i class="ri ri-movie-fill"></i> ${videoTitle.length}`
+
 
 
 function changeVideo(button, videoUrl, title) {
